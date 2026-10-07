@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SnapBooth - PhotoboothNandaa</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">📸 SnapBoothNandae</div>
+
+        <div class="nav-menu">
+            <a href="#home">Home</a>
+            <a href="#about">Tentang</a>
+            <a href="#booth">Photobooth Nanda</a>
+        </div>
+    </nav>
+
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+
+            <p class="small-title">
+                ✨ CAPTURE YOUR MOMENT
+            </p>
+
+            <h1>
+                Buat Kenangan<br>
+                Jadi Lebih <span>Seru!</span>
+            </h1>
+
+            <p>
+                Ambil foto bersama teman, pilih filter favorit,
+                dan buat photobooth strip kamu sendiri.
+            </p>
+
+            <button onclick="startBooth()" class="btn-start">
+                📸 Mulai Foto
+            </button>
+
+        </div>
+
+        <div class="hero-preview">
+
+            <div class="photo-card">
+                <div class="photo-placeholder">
+                    📸
+                </div>
+
+                <div class="photo-placeholder">
+                    😎
+                </div>
+
+                <div class="photo-placeholder">
+                    🥰
+                </div>
+
+                <div class="photo-placeholder">
+                    🤩
+                </div>
+
+                <h3>SNAPBOOTH</h3>
+
+                <p>Make your moment memorable</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PHOTObooth -->
+    <section id="booth" class="booth-section">
+
+        <h2>📸 Photobooth</h2>
+
+        <p>Siapkan pose terbaik kamu!</p>
+
+        <div class="booth-container">
+
+            <div class="camera-area">
+
+                <video id="video" autoplay></video>
+
+                <div id="countdown"></div>
+
+                <div class="camera-controls">
+
+                    <select id="filter">
+                        <option value="none">Normal</option>
+                        <option value="grayscale(1)">Hitam Putih</option>
+                        <option value="sepia(1)">Sepia</option>
+                        <option value="brightness(1.2)">
+                            Bright
+                        </option>
+                        <option value="contrast(1.4)">
+                            Contrast
+                        </option>
+                    </select>
+
+                    <button onclick="takePhoto()">
+                        📸 Ambil Foto
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-area">
+
+                <h3>Hasil Foto</h3>
+
+                <div id="photos"></div>
+
+                <button
+                    onclick="downloadPhotos()"
+                    class="download-btn">
+                    ⬇ Download Foto
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+
+        <h2>Tentang SnapBooth</h2>
+
+        <p>
+            SnapBooth adalah web photobooth sederhana yang
+            memungkinkan kamu mengambil foto langsung melalui
+            kamera laptop atau smartphone.
+        </p>
+
+    </section>
+
+
+    <canvas id="canvas"></canvas>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+</html>
